@@ -1,9 +1,8 @@
-
 name: Redis Cluster
 description: |
   (Experimental) Redis cluster
 version: 3.0
 category: Clustering
 maintainer: "Sven Ahlfeld <sven.ahlfeld@gmx.net>"
-minimum_rancher_version: v0.56.0
+minimum_rancher_version: v1.0.0
 license: 
