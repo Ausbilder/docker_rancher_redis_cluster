@@ -4,8 +4,8 @@ init:
   - redis
   labels:
      io.rancher.container.start_once: true
-  command: /redis/bootstrap.sh master ${redis_port} ${replication_factor} 
+  command: /redis/bootstrap.sh ${redis_port} ${rep_factor} init
   
 redis:
   image: svenahlfeld/rediscluster 
-  command: /redis/bootstrap.sh ${redis_port} 
+  command: /redis/bootstrap.sh ${redis_port} ${rep_factor} client
