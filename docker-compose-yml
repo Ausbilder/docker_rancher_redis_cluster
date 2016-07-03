@@ -1,0 +1,11 @@
+init:
+  image: svenahlfeld/rediscluster
+  link:
+  - redis
+  labels:
+     io.rancher.container.start_once: true
+  command: /redis/bootstrap.sh master ${redis_port} ${replication_factor} 
+  
+redis:
+  image: svenahlfeld/rediscluster 
+  command: /redis/bootstrap.sh ${redis_port} 
