@@ -1,2 +1,3 @@
 #!/bin/bash
-return  $(curl http://rancher-metadata/latest/self/service/name)
+SERVICE_NAME=$(curl http://rancher-metadata/latest/self/service/name)
+export SERVICE_NAME

@@ -1,10 +1,6 @@
 #!/bin/bash
-
-#declare a dictionary Hostname:IP
 declare -A CONTAINER
-
 container_map=$(curl http://rancher-metadata/latest/services/$1/containers)	
-
 for host in $container_map;
 do
 	container_name=$(echo "${host:2}")
